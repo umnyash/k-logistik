@@ -1,0 +1,27 @@
+.hero {
+  text-align: center;
+}
+
+.hero__slogan {
+  margin: 0 0 30px;
+  font-size: 32px;
+  line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $laptop-width) {
+    font-size: 64px;
+    line-height: 90px;
+  }
+}
+
+.hero__button {
+  margin: 0 0 40px;
+}
+
+.hero__image {
+  display: block;
+}

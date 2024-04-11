@@ -1,0 +1,10 @@
+mixin request
+  section.request&attributes(attributes)
+    .request__inner.container
+      .request__form-column
+        h2.request__heading.heading Хотите заказать или доставить груз?
+        p.request__text Давайте свяжемся
+        +request-form({ size: 'm', submitButtonText: 'Заказать звонок', withSubmitComment: true })(class='request__form')
+      .request__contacts-column
+        a.request__phone(href='tel:+78312229445') +7 (831) 222 94 45
+        +socials({ style: 'solid', size: 'm' })(class='request__socials')

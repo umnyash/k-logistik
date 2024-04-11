@@ -1,0 +1,25 @@
+.request-form__section {
+  display: grid;
+  padding: 0;
+  border: none;
+  margin: 0;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px 40px;
+}
+
+.request-form__footer {
+  margin: 23px 0 0;
+}
+
+.request-form__submit-button {
+  width: 100%;
+}
+
+.request-form__submit-comment {
+  display: block;
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.5;
+}

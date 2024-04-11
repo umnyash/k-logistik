@@ -1,0 +1,23 @@
+.page__body {
+  min-width: 320px;
+  margin: 0;
+  font: 400 16px/22px $main-font-family;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.page__inner {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  box-sizing: border-box;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+}

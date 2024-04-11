@@ -1,0 +1,11 @@
+.advantages__list {
+  counter-reset: advantages;
+}
+
+.advantages__item {
+  counter-increment: advantages;
+
+  &::before {
+    content: "0" counter(advantages);
+  }
+}

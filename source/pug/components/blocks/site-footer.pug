@@ -1,0 +1,26 @@
+mixin site-footer
+  footer.site-footer.sub-theme.sub-theme--dark&attributes(attributes)
+    .site-footer__main-panel
+      .site-footer__main-panel-inner.container
+        +logo(class='site-footer__logo')
+        ul.site-footer__navigation
+          li.site-footer__navigation-item
+            a.site-footer__navigation-link(href='#advantages') Преимущества
+          li.site-footer__navigation-item
+            a.site-footer__navigation-link(href='#services') Услуги
+          li.site-footer__navigation-item
+            a.site-footer__navigation-link(href='#delivery-types') Виды доставок
+          li.site-footer__navigation-item
+            a.site-footer__navigation-link(href='#cargo-types') Грузы
+          li.site-footer__navigation-item
+            a.site-footer__navigation-link(href='#about') О компании
+        .site-footer__contacts
+          a.site-footer__contacts-item(href='tel:+78312229445') +7 (831) 222 94 45
+          a.site-footer__contacts-item(href="mailto:info@klogistik.ru") info@klogistik.ru
+          +socials({ style: 'bordered', size: 's' })(class='site-footer__socials')
+          p.site-footer__contacts-address Адрес: Нижегородская область, город Бор, переулок Воровского 9-31
+        +request-form({ size: 's', submitButtonText: 'Заказать звонок'})(class='site-footer__form')
+    .site-footer__bottom-panel
+      .site-footer__bottom-panel-inner.container
+        p.site-footer__copyright © 2018 ООО "К-Логистик"
+        a.site-footer__privacy-policy Политика конфиденциальности

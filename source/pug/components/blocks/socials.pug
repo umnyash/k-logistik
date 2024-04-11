@@ -1,0 +1,23 @@
+mixin socials__logo({ src, alt })
+  span(class='socials__logo' role='img' style=`mask-image: url("${src}")` aria-label= alt loading='lazy')
+
+mixin socials__item({ name, href })
+  li.socials__item
+    a.socials__link(href= href target='_blank' rel='noopener' class=`socials__link--${name}`)
+      case name
+        when 'telegram'
+          +socials__logo({ src: 'img/icons.svg#socials_telegram', alt: 'Telegram.' })
+        when 'vk'
+          +socials__logo({ src: 'img/icons.svg#socials_vk', alt: 'VK.' })
+        when 'whatsapp'
+          +socials__logo({ src: 'img/icons.svg#socials_whatsapp', alt: 'WhatsApp.' })
+
+mixin socials({ style, size } = {})
+  -
+    var styleClass = style ? `socials--style_${style}` : '';
+    var sizeClass = size ? `socials--size_${size}` : '';
+
+  ul.socials(class=`${styleClass} ${sizeClass}`)&attributes(attributes)
+    +socials__item({ name: 'vk', href: '#' })
+    +socials__item({ name: 'telegram', href: 'https://t.me/Eremin_D_E' })
+    +socials__item({ name: 'whatsapp', href: '#' })

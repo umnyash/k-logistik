@@ -1,0 +1,28 @@
+mixin request-form({ size, submitButtonText, withSubmitComment })
+  form.request-form(action='https://forms.tildacdn.com/procces' method='post')&attributes(attributes)
+    fieldset.request-form__section
+      +text-field({
+        label: 'Имя:',
+        name: 'name',
+        type: 'text',
+        placeholder: 'Имя',
+        isRequired: true,
+        size: size
+      })
+      +text-field({
+        label: 'Телефон:',
+        name: 'tel',
+        type: 'tel',
+        placeholder: 'Телефон',
+        isRequired: true,
+        maxLength: 18,
+        size: size
+      })
+    .request-form__footer
+      +button({
+        tag: 'button',
+        type: 'submit',
+        text: submitButtonText
+      })(class='request-form__submit-button button--secondary')
+      if withSubmitComment
+        small.request-form__submit-comment Нажимая кнопку, я даю согласие на обработку персональных данных

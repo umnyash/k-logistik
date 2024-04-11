@@ -1,0 +1,33 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #1a1b27;
+  --text-hard-color: #000000;
+  --background-additional-color: #f7f8f8;
+  --accent-color: #faaa00;
+
+  --edge-indent: 16px;
+
+  @media (min-width: $tablet-width) {
+    --edge-indent: 24px;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    --edge-indent: 32px;
+  }
+
+  @media (min-width: $laptop-width) {
+    --edge-indent: 40px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sub-theme--dark {
+  --text-color: #ffffff;
+  --background-color: #1a1b27;
+  --logo-square-color: transparent;
+  --bordered-socials-color: #faaa00;
+}

@@ -1,0 +1,18 @@
+mixin services
+  section.services&attributes(attributes)
+    .services__inner.container
+      h2.services__heading.heading Услуги
+      picture.services__image-wrapper
+        img.services__image(src='img/services.webp' width='460' height='551' alt='Грузовой транспорт.')
+      ul.services__list
+        li.services__item Заключение контракта и оплата зарубежному поставщику
+        li.services__item Экспортное таможенное оформление на территории иностранного государства
+        li.services__item Доставка груза
+        li.services__item Консолидация грузов на складе на территории Европы с дальнейшей отправкой покупателю в РФ
+        li.services__item Содействие в получение разрешительной документации на территории РФ
+        li.services__item Содействие в таможенном оформлении на территории РФ
+      +button({
+        tag: 'a',
+        href: '#',
+        text: 'Заказать консультацию'
+      })(class='hero__button button--primary')

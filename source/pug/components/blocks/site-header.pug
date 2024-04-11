@@ -1,0 +1,16 @@
+mixin site-header
+  header.site-header&attributes(attributes)
+    nav.site-header__navigation
+      .site-header__navigation-inner.container
+        +logo(class='site-header__logo')
+        a.site-header__phone(href='tel:+78312229445') +7 (831) 222 94 45
+        +burger(class='site-header__menu-toggle-button')
+        .site-header__menu
+          ul.site-header__menu-list
+            li.site-header__menu-item
+              a.site-header__menu-link(href='#advantages') Преимущества
+            li.site-header__menu-item
+              a.site-header__menu-link(href='#services') Услуги
+            li.site-header__menu-item
+              a.site-header__menu-link(href='#about') О компании
+          a.site-header__menu-phone(href='tel:+78312229445') +7 (831) 222 94 45
