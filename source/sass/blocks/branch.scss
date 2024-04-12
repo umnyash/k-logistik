@@ -1,0 +1,103 @@
+.branch {
+  display: grid;
+  padding: 20px;
+  border-radius: 8px;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "flag    country"
+    "title   title"
+    "address address"
+    "phone   phone";
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  background: var(--background-additional-color);
+
+  @media (min-width: $laptop-width) {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(3, auto) 1fr;
+    column-gap: 56px;
+    grid-template-areas:
+      "country flag"
+      "title   flag"
+      "address flag"
+      "phone   flag";
+    align-items: start;
+  }
+}
+
+.branch__title {
+  grid-area: title;
+  margin: 16px 0 12px;
+  font: inherit;
+
+  @media (min-width: $laptop-width) {
+    margin: 20px 0 12px;
+  }
+}
+
+.branch__country {
+  grid-area: country;
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+
+  @media (min-width: $laptop-width) {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.branch__flag {
+  grid-area: flag;
+  width: 40px;
+  height: auto;
+  border-radius: 4px;
+  margin: 0 12px 4px 0;
+
+  @media (min-width: $laptop-width) {
+    align-self: center;
+    width: 186px;
+    border-radius: 28px;
+    margin: 0;
+  }
+}
+
+.branch__address {
+  grid-area: address;
+  margin: 0 0 12px;
+  opacity: 50%;
+}
+
+.branch__phone {
+  position: relative;
+  grid-area: phone;
+  justify-self: start;
+  text-decoration: none;
+  color: inherit;
+  transition: color $little-interaction-duration $little-interaction-timing-function;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: var(--accent-color);
+    transform: translateY(-4px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: $little-interaction-duration;
+    transition-timing-function: $little-interaction-timing-function;
+  }
+
+  &:hover {
+    color: var(--accent-color);
+
+    &::after {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

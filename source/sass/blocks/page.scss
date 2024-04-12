@@ -21,3 +21,13 @@
     height: 100dvh;
   }
 }
+
+.page__cargo-types,
+.page__request,
+.page__about {
+  margin: 0 0 60px;
+
+  @media (min-width: $laptop-width) {
+    margin: 0 0 80px;
+  }
+}

@@ -4,18 +4,15 @@
   --text-hard-color: #000000;
   --background-additional-color: #f7f8f8;
   --accent-color: #faaa00;
+  --border-color: #cbd1d5;
 
   --edge-indent: 16px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $narrow-tablet-width) {
     --edge-indent: 24px;
   }
 
   @media (min-width: $wide-tablet-width) {
-    --edge-indent: 32px;
-  }
-
-  @media (min-width: $laptop-width) {
     --edge-indent: 40px;
   }
 }

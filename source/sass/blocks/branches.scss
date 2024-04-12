@@ -1,0 +1,24 @@
+.branches__heading {
+  margin: 0 0 28px;
+
+  @media (min-width: $laptop-width) {
+    margin: 0 0 50px;
+  }
+}
+
+.branches__list {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  row-gap: 24px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px;
+  }
+
+  @media (min-width: $laptop-width) {
+    gap: 32px 40px;
+  }
+}
