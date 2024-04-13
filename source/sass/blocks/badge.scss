@@ -1,0 +1,29 @@
+.badge {
+  --logo-text-color: var(--text-alter-color);
+
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--accent-color);
+
+  &--alter {
+    --logo-text-color: inherit;
+    background: var(--background-color);
+  }
+}
+
+.badge__image {
+  display: block;
+}
+
+.badge--with-tail_left {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 100vw;
+    background: inherit;
+  }
+}

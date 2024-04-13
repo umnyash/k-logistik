@@ -1,9 +1,11 @@
 mixin services
-  section.services&attributes(attributes)
-    .services__inner.container
+  section.services(id='services' data-menu-link-target)&attributes(attributes)
+    .services__inner
       h2.services__heading.heading Услуги
-      picture.services__image-wrapper
-        img.services__image(src='img/services.webp' width='460' height='551' alt='Грузовой транспорт.')
+      .services__image-wrapper
+        img.services__image(src='img/services.webp' width='460' height='551' alt='Грузовой транспорт.' loading='lazy')
+        .services__badge-wrapper.sub-theme.sub-theme--dark
+          +badge(class='services__badge badge--alter')
       ul.services__list
         li.services__item Заключение контракта и оплата зарубежному поставщику
         li.services__item Экспортное таможенное оформление на территории иностранного государства
@@ -15,4 +17,4 @@ mixin services
         tag: 'a',
         href: '#',
         text: 'Заказать консультацию'
-      })(class='hero__button button--primary')
+      })(class='services__button button--secondary')

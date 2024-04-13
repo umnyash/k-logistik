@@ -1,16 +1,24 @@
 mixin cargo-types
-  section.cargo-types&attributes(attributes)
+  section.cargo-types(id='cargo-types' data-menu-link-target)&attributes(attributes)
+    .cargo-types__badge-wrapper.container
+      +badge(class='cargo-types__badge badge--with-tail_left')
     .cargo-types__inner.container
       h2.cargo-types__heading.heading Работаем со всеми типами грузов
-      .cargo-types__item Сборные
+      .cargo-types__item
+        p.cargo-types__item-title Сборные
         img.cargo-types__item-image(src='img/icons.svg#cargo-types_prefabricated' width='260' height='200' alt='' loading='lazy')
-      .cargo-types__item Генеральные
+      .cargo-types__item
+        p.cargo-types__item-title Генеральные
         img.cargo-types__item-image(src='img/icons.svg#cargo-types_general' width='260' height='200' alt='' loading='lazy')
-      .cargo-types__item Негабаритные
+      .cargo-types__item
+        p.cargo-types__item-title Негабаритные
         img.cargo-types__item-image(src='img/icons.svg#cargo-types_oversized' width='260' height='200' alt='' loading='lazy')
-      .cargo-types__item Опасные
+      .cargo-types__item
+        p.cargo-types__item-title Опасные
         img.cargo-types__item-image(src='img/icons.svg#cargo-types_dangerous' width='260' height='200' alt='' loading='lazy')
-      .cargo-types__item Санкционные
+      .cargo-types__item
+        p.cargo-types__item-title Санкционные
         img.cargo-types__item-image(src='img/icons.svg#cargo-types_sanctions' width='260' height='200' alt='' loading='lazy')
-      .cargo-types__item Другое
+      .cargo-types__item
+        p.cargo-types__item-title Другое
         img.cargo-types__item-image(src='img/icons.svg#cargo-types_other' width='260' height='200' alt='' loading='lazy')

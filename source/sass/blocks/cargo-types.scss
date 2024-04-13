@@ -1,3 +1,16 @@
+.cargo-types__badge-wrapper {
+  display: none;
+
+  @media (min-width: $wide-tablet-width) {
+    display: block;
+  }
+}
+
+.cargo-types__badge {
+  vertical-align: middle;
+  margin: 0 0 14px 53px;
+}
+
 .cargo-types__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -10,26 +23,57 @@
   @media (min-width: $narrow-tablet-width) {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (min-width: $wide-tablet-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    gap: 40px;
+  }
 }
 
 .cargo-types__heading {
   grid-column: 1 / -1;
   margin: 0;
 
+  @media (min-width: $wide-tablet-width) {
+    grid-column: 1 / 3;
+    align-self: center;
+  }
+
   @media (min-width: $laptop-width) {
-    margin: 0 0 50px;
+    margin: 0 0 0 56px;
   }
 }
 
 .cargo-types__item {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 4px;
-  justify-items: center;
+  align-items: center;
 
   @media (min-width: 375px) {
-    grid-template-columns: auto auto;
-    gap: 8px;
-    // place-items: start;
+    row-gap: 8px;
+  }
+
+  @media (min-width: $narrow-tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    row-gap: 16px;
+  }
+}
+
+.cargo-types__item-title {
+  margin: 0;
+
+  @media (min-width: 375px) {
+    display: flex;
+    column-gap: 8px;
 
     &::before {
       content: "";
@@ -39,25 +83,30 @@
     }
   }
 
-  @media (min-width: $narrow-tablet-width) {
-    font-size: 18px;
-    line-height: 24px;
+  @media (min-width: $wide-tablet-width) {
+    align-self: flex-start;
+    column-gap: 16px;
   }
 }
 
 .cargo-types__item-image {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  width: 80px;
+  order: -1;
+  width: 78px;
   height: auto;
 
   @media (min-width: 375px) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    width: 120px;
+    width: 104px;
   }
 
-  @media (min-width: $narrow-tablet-width) {
-    width: 200px;
+  @media (min-width: $tablet-width) {
+    width: 160px;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    width: 180px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 260px;
   }
 }

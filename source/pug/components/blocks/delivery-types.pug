@@ -1,13 +1,13 @@
 mixin delivery-types
-  section.delivery-types&attributes(attributes)
+  section.delivery-types(id='delivery-types' data-menu-link-target)&attributes(attributes)
     .delivery-types__inner.container
       h2.delivery-types__heading.heading Виды доставок
-      ul.delivery-types__list
+      ul.delivery-types__list.sub-theme.sub-theme--dark
         li.delivery-types__item Авто
-          img.delivery-types__image(src='img/icons.svg#delivery-types_auto' width='56' height='56' alt='Автомобиль.' loading='lazy')
+          img.delivery-types__image(src='img/icons.svg#delivery-types_car' width='56' height='56' alt='Автомобиль.' loading='lazy')
         li.delivery-types__item Морские
           img.delivery-types__image(src='img/icons.svg#delivery-types_ship' width='56' height='56' alt='Корабль.' loading='lazy')
-        li.delivery-types__item Железно-дорожные
+        li.delivery-types__item Железнодорожные
           img.delivery-types__image(src='img/icons.svg#delivery-types_train' width='56' height='56' alt='Поезд.' loading='lazy')
         li.delivery-types__item Авиа
           img.delivery-types__image(src='img/icons.svg#delivery-types_airplane' width='56' height='56' alt='Самолёт.' loading='lazy')

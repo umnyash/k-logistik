@@ -4,8 +4,8 @@
 
 .hero__slogan {
   margin: 0 0 30px;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 36px;
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
@@ -24,4 +24,7 @@
 
 .hero__image {
   display: block;
+  width: 1146px;
+  max-width: 100%;
+  margin: 0 auto;
 }

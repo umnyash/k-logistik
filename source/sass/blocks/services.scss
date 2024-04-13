@@ -1,0 +1,153 @@
+.services__inner {
+  display: grid;
+
+  @media (min-width: $wide-tablet-width) {
+    max-width: $centerer-max-width;
+    padding: 0 var(--edge-indent);
+    margin-right: auto;
+    margin-left: auto;
+    grid-template-columns: 1.4fr 2fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "heading heading"
+      "image   list"
+      "image   button";
+    column-gap: 40px;
+    align-items: start;
+  }
+
+  @media (min-width: $laptop-width) {
+    grid-template-columns: 460px 1fr;
+  }
+}
+
+.services__heading {
+  padding: 0 var(--edge-indent);
+  margin: 0 0 28px;
+
+  @media (min-width: $laptop-width) {
+    margin: 0 0 50px;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    grid-area: heading;
+    padding: 0;
+  }
+}
+
+.services__image-wrapper {
+  position: relative;
+  z-index: 0;
+  height: 200px;
+  margin: 0 0 24px;
+  background: #e8ebed;
+
+  @media (min-width: $narrow-tablet-width) {
+    height: 280px;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    grid-area: image;
+    height: 100%;
+  }
+}
+
+.services__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  object-position: center;
+}
+
+.services__badge-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 16px 0 108px;
+  background: var(--background-color);
+
+  @media (min-width: $wide-tablet-width) {
+    display: block;
+  }
+}
+
+.services__badge {
+  vertical-align: middle;
+  margin: 0;
+}
+
+.services__list {
+  display: grid;
+  padding: 0 var(--edge-indent);
+  margin: 0 0 28px;
+  list-style: none;
+  row-gap: 20px;
+
+  @media (min-width: $wide-tablet-width) {
+    grid-area: list;
+    padding: 0;
+  }
+
+  @media (min-width: $laptop-width) {
+    row-gap: 0;
+  }
+}
+
+.services__item {
+  position: relative;
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: url("../img/icons.svg#arrow");
+  }
+
+  @media (min-width: $narrow-tablet-width) {
+    column-gap: 16px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 24px 16px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.2;
+    }
+
+    &:first-child {
+      padding-top: 10px;
+    }
+  }
+}
+
+.services__button {
+  margin: 0 var(--edge-indent);
+
+  @media (min-width: $tablet-width) {
+    justify-self: center;
+    min-width: 358px;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    grid-area: button;
+    justify-self: start;
+    margin: 0;
+  }
+}

@@ -2,6 +2,7 @@
   min-width: 320px;
   margin: 0;
   font: 400 16px/22px $main-font-family;
+  font-variant-numeric: lining-nums;
   color: var(--text-color);
   background-color: var(--background-color);
 }
@@ -15,13 +16,35 @@
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   overflow-y: auto;
-  scroll-behavior: smooth;
 
   @supports (height: 100dvh) {
     height: 100dvh;
   }
 }
 
+.page__site-header.page__site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  margin: 0 0 28px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 40px;
+  }
+}
+
+.delivery-types {
+  margin: 0 0 60px;
+
+  @media (min-width: $wide-tablet-width) {
+    margin: 0;
+  }
+}
+
+.page__advantages,
+.page__services,
 .page__cargo-types,
 .page__request,
 .page__about {
