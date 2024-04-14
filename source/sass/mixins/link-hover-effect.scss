@@ -1,0 +1,23 @@
+@mixin link-hover-effect($line-height, $line-shift, $line-color: var(--accent-color)) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: $line-height;
+    background: $line-color;
+    transform: translateY(-$line-shift);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: $little-interaction-duration;
+    transition-timing-function: $little-interaction-timing-function;
+  }
+
+  &:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

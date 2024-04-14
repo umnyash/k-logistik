@@ -28,6 +28,15 @@ html.page(class= pageClass lang='ru')
       main.page__content
         block content
       +site-footer(class='page__site-footer')
+    +modal(class='modal--with_form modal--hidden' data-modal='request')
+      +request-form({
+        heading: 'Оставить заявку',
+        withTextArea: true,
+        size: 'm',
+        submitButtonText: 'Отправить',
+        withSubmitComment: true,
+        modal: true
+      })(class='modal__form')
     block modals
     script(src='vendor/pristine/pristine.min.js')
     script(src='js/script.min.js')

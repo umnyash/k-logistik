@@ -1,5 +1,11 @@
-mixin request-form({ size, submitButtonText, withSubmitComment })
-  form.request-form(action='https://forms.tildacdn.com/procces' method='post')&attributes(attributes)
+mixin request-form({ heading, size, submitButtonText, withSubmitComment, withTextArea, modal })
+  form.request-form(
+    action='https://echo.htmlacademy.ru'
+    method='post'
+    class= modal ? 'request-form--modal' : false
+  )&attributes(attributes)
+    if heading
+      h2.request-form__heading.heading.heading--size_s= heading
     fieldset.request-form__section
       +text-field({
         label: 'Имя:',
@@ -8,7 +14,7 @@ mixin request-form({ size, submitButtonText, withSubmitComment })
         placeholder: 'Имя',
         isRequired: true,
         size: size
-      })
+      })(class='request-form__item request-form__item--name')
       +text-field({
         label: 'Телефон:',
         name: 'tel',
@@ -17,7 +23,15 @@ mixin request-form({ size, submitButtonText, withSubmitComment })
         isRequired: true,
         maxLength: 18,
         size: size
-      })
+      })(class='request-form__item request-form__item--tel')
+      if withTextArea
+        +textarea({
+          label: 'Сообщение:',
+          name: 'message',
+          placeholder: 'Ваше сообщение',
+          maxLength: 1000,
+          size: size
+        })(class='request-form__item request-form__item--wide')
     .request-form__footer
       +button({
         tag: 'button',
@@ -25,4 +39,4 @@ mixin request-form({ size, submitButtonText, withSubmitComment })
         text: submitButtonText
       })(class='request-form__submit-button button--secondary')
       if withSubmitComment
-        small.request-form__submit-comment Нажимая кнопку, я даю согласие на обработку персональных данных
+        small.request-form__submit-comment Нажимая кнопку, я даю согласие на&nbsp;обработку персональных данных

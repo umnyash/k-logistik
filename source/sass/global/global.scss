@@ -6,6 +6,13 @@
   --background-additional-color: #f7f8f8;
   --accent-color: #faaa00;
   --border-color: #cbd1d5;
+  --overlay-color: rgba(26, 27, 39, 0.8);
+  --error-color: #ea0029;
+
+  --secondary-button-background-hover-color: #1a1b27;
+  --secondary-button-text-hover-color: #ffffff;
+
+  --bordered-socials-logo-hover-background-color: #faaa00;
 
   --edge-indent: 16px;
 
@@ -28,4 +35,9 @@ img {
   --background-color: #1a1b27;
   --logo-square-color: transparent;
   --bordered-socials-color: #faaa00;
+
+  --secondary-button-background-hover-color: #ffffff;
+  --secondary-button-text-hover-color: #faaa00;
+
+  --bordered-socials-logo-hover-background-color: #ffffff;
 }

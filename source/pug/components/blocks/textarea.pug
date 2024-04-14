@@ -1,0 +1,6 @@
+mixin textarea({ label, name, text, placeholder, isRequired, maxLength, size })
+  .textarea(class= size ? `textarea--size_${size}` : false)&attributes(attributes)
+    label.textarea__inner
+      span.visually-hidden= label
+      textarea.textarea__control(name= name, placeholder= placeholder, required= isRequired || false, maxlength= maxLength || false)= text
+    block

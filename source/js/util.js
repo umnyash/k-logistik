@@ -1,15 +1,16 @@
-export function throttle(callback, delay) {
-  let lastTime = 0;
-  let timeoutId;
+import { KeyCode } from './const.js';
 
-  return (...rest) => {
-    const now = new Date();
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => callback.apply(this, rest), delay);
+export function isEscapeEvent(evt) {
+  return evt.code === KeyCode.ESCAPE;
+}
 
-    if (now - lastTime >= delay) {
-      callback.apply(this, rest);
-      lastTime = now;
-    }
-  };
+export function isBackspaceEvent(evt) {
+  return evt.code === KeyCode.BACKSPACE;
+}
+
+export function createElementByString(template) {
+  const newElement = document.createElement('div');
+  newElement.innerHTML = template;
+
+  return newElement.firstElementChild;
 }

@@ -14,11 +14,5 @@ $centerer-max-width: 1160px;
 // Timings
 $little-interaction-duration: 100ms;
 $little-interaction-timing-function: linear;
-$site-header-navigation-animation-duration: 300ms;
-$modal-opening-duration: 300ms;
-$modal-closing-duration: 100ms;
-$drawer-timing-duration: 300ms;
-$drawer-timing-function: ease-in-out;
-
-
-$site-header-menu-duration: 300ms;
+$burger-menu-animation-duration: 250ms;
+$modal-animation-duration: 300ms;

@@ -1,0 +1,32 @@
+.alert {
+  box-sizing: border-box;
+  padding: 28px var(--edge-indent) 20px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background: var(--background-color);
+
+  @media (min-width: $tablet-width) {
+    padding: 36px var(--edge-indent) 24px;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    padding: 36px;
+    border-radius: 8px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 48px;
+  }
+}
+
+.alert__heading {
+  margin: 0 0 20px;
+}
+
+.alert__text {
+  margin: 0 0 20px;
+}
+
+.alert__button {
+  width: 100%;
+}

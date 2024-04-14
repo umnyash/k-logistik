@@ -28,7 +28,7 @@
   background-color: currentColor;
   opacity: 1;
   transform: rotate(0);
-  transition: 250ms ease-in-out;
+  transition: $burger-menu-animation-duration ease-in-out;
 
   &:nth-child(1) {
     top: 0;

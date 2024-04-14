@@ -2,10 +2,6 @@
   display: grid;
 
   @media (min-width: $wide-tablet-width) {
-    max-width: $centerer-max-width;
-    padding: 0 var(--edge-indent);
-    margin-right: auto;
-    margin-left: auto;
     grid-template-columns: 1.4fr 2fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
@@ -14,6 +10,8 @@
       "image   button";
     column-gap: 40px;
     align-items: start;
+
+    @include container;
   }
 
   @media (min-width: $laptop-width) {

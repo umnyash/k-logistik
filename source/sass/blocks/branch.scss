@@ -77,27 +77,9 @@
   color: inherit;
   transition: color $little-interaction-duration $little-interaction-timing-function;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 1px;
-    background: var(--accent-color);
-    transform: translateY(-4px);
-    opacity: 0;
-    transition-property: transform, opacity;
-    transition-duration: $little-interaction-duration;
-    transition-timing-function: $little-interaction-timing-function;
-  }
-
-  &:hover {
+  &:active {
     color: var(--accent-color);
-
-    &::after {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
+
+  @include link-hover-effect(1px, 4px);
 }

@@ -2,9 +2,14 @@
   position: relative;
   z-index: 0;
   border-bottom: 1px solid var(--border-color);
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 24px;
   background: var(--background-additional-color);
+
+  @media (min-width: $wide-tablet-width) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 .site-header__navigation {
@@ -51,11 +56,29 @@
     line-height: 28px;
     text-decoration: none;
     color: inherit;
+    transition-property: color, opacity;
+    transition-duration: $little-interaction-duration;
+    transition-timing-function: $little-interaction-timing-function;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    &:active {
+      color: var(--accent-color);
+      opacity: 0.8;
+    }
   }
 
   @media (min-width: $wide-tablet-width) {
     order: 1;
     color: var(--accent-color);
+
+    &:active {
+      color: inherit;
+    }
+
+    @include link-hover-effect(1px, 4px, var(--text-color));
   }
 }
 
@@ -76,15 +99,24 @@
     right: 0;
     left: 0;
     z-index: -1;
-    display: none;
     padding: 0 0 20px;
     border-bottom: 1px solid var(--border-color);
     text-align: center;
     background: inherit;
+
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+
+  &--animated {
+    transition:
+      transform $burger-menu-animation-duration ease-in-out,
+      visibility $burger-menu-animation-duration ease-in-out;
   }
 
   &--open {
-    display: block;
+    transform: none;
+    visibility: visible;
   }
 
   @media (min-width: $wide-tablet-width) {
@@ -112,39 +144,26 @@
 }
 
 .site-header__menu-link {
-  position: relative;
   display: block;
   padding: 12px var(--edge-indent);
   text-decoration: none;
   color: inherit;
   transition: color $little-interaction-duration $little-interaction-timing-function;
 
-  &:hover {
+  @media (max-width: ($wide-tablet-width - 1)) {
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  &:active {
     color: var(--accent-color);
   }
 
   @media (min-width: $wide-tablet-width) {
     padding: 0;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      height: 1px;
-      background: var(--accent-color);
-      transform: translateY(-4px);
-      opacity: 0;
-      transition-property: transform, opacity;
-      transition-duration: $little-interaction-duration;
-      transition-timing-function: $little-interaction-timing-function;
-    }
-
-    &:hover::after {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    @include link-hover-effect(1px, 4px);
   }
 }
 

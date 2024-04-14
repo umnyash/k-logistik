@@ -4,7 +4,7 @@ mixin hero
       p.hero__slogan Доставим #[b.accent санкционный] товар в&nbsp;Россию из&nbsp;любой точки мира
       +button({
         tag: 'a',
-        href: '#',
+        href: '#request',
         text: 'Заказать доставку'
-      })(class='hero__button button--primary')
+      })(class='hero__button button--primary' data-modal-opener='request')
     img.hero__image(src='img/route.svg' width='1146' height='194' alt='Точки на планете, составляющие маршрут.')

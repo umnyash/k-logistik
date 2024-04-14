@@ -4,17 +4,21 @@ mixin about
       h2.about__heading.heading О компании
       .about__content
         .about__column
-          picture
-            source(media='(min-width: 728px)' srcset=`img/about/port-desktop.webp 1x, img/about/port-desktop.webp 2x`)
-            source(media='(min-width: 421px)' srcset=`img/about/port-tablet.webp 1x, img/about/port-tablet.webp 2x`)
-            img(src='img/about/port.webp' srcset='img/about/port@2x.webp 2x' alt='Погрузка контейнеров в порту.' loading='lazy')
-          p Отличительной особенностью ООО "К-Логистик" является индивидуальный подход к каждому клиенту. Специалисты компании внимательно изучают потребности заказчика и предлагают наиболее подходящие условия сотрудничества. Это позволяет клиентам сэкономить время, деньги и быть уверенным в сохранности своего груза.
-          p ООО "К-Логистик" предоставляет качественные услуги по перевозке грузов со всего мира в Россию и страны ближнего зарубежья. Компания специализируется на перевозке как стандартных, так и негабаритных, тяжеловесных и опасных грузов, что позволяет удовлетворять потребности клиентов различных отраслей.
+          .about__row.about__row--image
+            picture
+              source(media='(min-width: 728px)' srcset=`img/about/ship-desktop.webp 1x, img/about/ship-desktop.webp 2x`)
+              source(media='(min-width: 421px)' srcset=`img/about/ship-tablet.webp 1x, img/about/ship-tablet.webp 2x`)
+              img(src='img/about/ship.webp' srcset='img/about/ship@2x.webp 2x' alt='Сухогруз, плывущий по морю.' loading='lazy')
+          .about__row
+            p #[b.accent ООО "К&#8209;Логистик"] – это транспортно-экспедиционная компания, основанная в&nbsp;2014&nbsp;году и&nbsp;успешно работающая на&nbsp;рынке уже более 8&nbsp;лет. Компания зарекомендовала себя как надежный и&nbsp;профессиональный партнер, готовый предложить своим клиентам широкий спектр услуг в&nbsp;области грузоперевозок и&nbsp;экспедирования.
+            p Основные принципы работы ООО "К&#8209;Логистик": надежность, безопасность и&nbsp;оперативность. В своей работе компания использует только проверенных партнеров, а&nbsp;также разрабатывает оптимальные маршруты движения для&nbsp;сокращения сроков доставки грузов.
         .about__column
-          picture
-            source(media='(min-width: 728px)' srcset=`img/about/ship-desktop.webp 1x, img/about/ship-desktop.webp 2x`)
-            source(media='(min-width: 421px)' srcset=`img/about/ship-tablet.webp 1x, img/about/ship-tablet.webp 2x`)
-            img(src='img/about/ship.webp' srcset='img/about/ship@2x.webp 2x' alt='Сухогруз, плывущий по морю.' loading='lazy')
-          p #[b.accent ООО "К-Логистик"] – это транспортно-экспедиционная компания, основанная в 2014 году и успешно работающая на рынке уже более 8 лет. Компания зарекомендовала себя как надежный и профессиональный партнер, готовый предложить своим клиентам широкий спектр услуг в области грузоперевозок и экспедирования.
-          p Основные принципы работы ООО "К-Логистик": надежность, безопасность и оперативность. В своей работе компания использует только проверенных партнеров, а также разрабатывает оптимальные маршруты движения для сокращения сроков доставки грузов.
+          .about__row
+            picture
+              source(media='(min-width: 728px)' srcset=`img/about/port-desktop.webp 1x, img/about/port-desktop.webp 2x`)
+              source(media='(min-width: 421px)' srcset=`img/about/port-tablet.webp 1x, img/about/port-tablet.webp 2x`)
+              img(src='img/about/port.webp' srcset='img/about/port@2x.webp 2x' alt='Погрузка контейнеров в порту.' loading='lazy')
+          .about__row
+            p Отличительной особенностью ООО&nbsp;"К&#8209;Логистик" является индивидуальный подход к&nbsp;каждому клиенту. Специалисты компании внимательно изучают потребности заказчика и&nbsp;предлагают наиболее подходящие условия сотрудничества. Это позволяет клиентам сэкономить время, деньги и&nbsp;быть уверенным в&nbsp;сохранности своего груза.
+            p ООО&nbsp;"К&#8209;Логистик" предоставляет качественные услуги по&nbsp;перевозке грузов со&nbsp;всего мира в&nbsp;Россию и&nbsp;страны ближнего зарубежья. Компания специализируется на&nbsp;перевозке как стандартных, так и&nbsp;негабаритных, тяжеловесных и&nbsp;опасных грузов, что позволяет удовлетворять потребности клиентов различных отраслей.
     +branches(class='about__branches')

@@ -12,6 +12,9 @@
 
 .socials__logo {
   display: block;
+  transition-property: background-color, transform;
+  transition-duration: $little-interaction-duration;
+  transition-timing-function: $little-interaction-timing-function;
 }
 
 .socials--size_s {
@@ -68,6 +71,15 @@
   .socials__logo {
     background: currentColor;
   }
+
+  .socials__link:hover .socials__logo {
+    background: var(--bordered-socials-logo-hover-background-color);
+  }
+
+  .socials__link:active .socials__logo {
+    background: var(--bordered-socials-logo-hover-background-color);
+    transform: scale(0.9);
+  }
 }
 
 .socials--style_solid {
@@ -79,5 +91,14 @@
 
   .socials__logo {
     background: var(--background-color);
+  }
+
+  .socials__link:hover .socials__logo {
+    background: var(--accent-color);
+  }
+
+  .socials__link:active .socials__logo {
+    background: var(--accent-color);
+    transform: scale(0.9);
   }
 }
